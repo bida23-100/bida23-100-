@@ -1,0 +1,275 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background: #111111; 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+header {
+  height: 80px;
+  background: #000;
+  color: #fff;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000; /* Ensure the header appears on top */
+}
+
+.logo {
+  height: 76px;
+  width: 110px;
+  display: inline-block;
+}
+
+.main {
+  padding: 16px;
+  flex: 1; 
+}
+
+.login-button {
+  position: absolute;
+  top: 20px;
+  margin-left: 1090px;
+  
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.login-button img {
+  width: 20px;
+  margin-left: 5px;
+}
+
+.openbtn {
+  background: none;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+}
+
+.openbtn:hover {
+  background-color: #d2691e;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fafafa;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  background-color: #000;
+}
+
+.sidebar a {
+  display: block;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidebar a:hover {
+  background-color: #d2691e;
+  color: #f2f2f2;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  width: 250px;
+  top: 40px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.sidebar .closebtn:hover {
+  background-color: #000;
+}
+
+.sidebar button {
+  color: #fff; 
+  margin-top: 200px;
+  padding: 20px;
+  border: none;
+  background-color: transparent; 
+  display: block; 
+  margin: 10px auto; 
+}
+
+.sidebar button:hover {
+  background-color: #d2691e;
+}
+
+#slider {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#slider figure {
+  margin: 0;
+  padding: 0;
+  width: 300%;
+  height: 100%;
+  display: flex;
+  animation: 20s slider infinite;
+}
+
+#slider figure img {
+  width: 100%;
+  height: 100%;
+  float: left;
+  object-fit: cover;
+}
+
+@keyframes slider {
+  0% {
+      margin-left: 0;
+  }
+  20% {
+      margin-left: 0;
+  }
+  25% {
+      margin-left: -100%;
+  }
+  45% {
+      margin-left: -100%;
+  }
+  50% {
+      margin-left: -200%;
+  }
+  70% {
+      margin-left: -200%;
+  }
+  75% {
+      margin-left: -300%;
+  }
+  95% {
+      margin-left: -300%;
+  }
+  100% {
+      margin-left: 0;
+  }
+}
+
+h2 {
+  margin-top: 100px;
+  margin-left: 30px;
+  position: relative;
+  padding: 10px 15px;
+  background-color: #252525;
+  color: white;
+  width: 400px;
+  border-radius: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 999; /* Ensure the h2 tags appear under the header */
+}
+
+.img {
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.float {
+  transition: transform 0.5s ease-in-out, box-shadow 0.3s;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.float:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+figcaption {
+  justify-content: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-left: 100px;
+  text-decoration: none;
+  color: #d2691e;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+footer {
+margin-top: 60px;
+  background-color: #252525;
+  color: #fff;
+  text-align: left;
+  padding: 20px 30px;
+  font-size: 16px;
+  margin-top: auto; 
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  color: #fff;
+}
+
+.social-icons a i {
+  font-size: 1.5em;
+}
+
+/* Align social icons to the bottom right */
+.social-icons {
+  margin-left: auto;
+}
+
+p {
+  margin: 0;
+}
+
+.info {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+}
+
+@media (max-width:768px) {
+  .sidebar {
+   width: calc(100% - (30px * .8));
+   padding-top:0 ;
+   }
+}
+@media (min-width:769px) and (max-width:1024px) {
+  .sidebar {
+   width : calc(25% - (30px * .9));
+   padding-top :60px ; 
+   }
+}
+@media (min-width :1025px) {
+  .sidebar {
+   width :calc(25% - (30px * .9));
+   padding-top :60px ; 
+   }
+}
