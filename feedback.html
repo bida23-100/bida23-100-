@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+  <title>Feedback Form</title>
+  <link href="signup.css" rel="stylesheet">  
+</head>
+
+<body>
+
+  <header>
+    <a href="Warner Bros.html"><img src="warnerbros.png" class="logo"></a>
+    
+    <div class="main">
+        <button class="openbtn" onclick="openNav()">☰</button>
+    </div>
+    
+    <div id="mySidebar" class="sidebar">
+        <nav>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="movies.html"><button>Movies</button></a>
+            <a href="tvshows.html"><button>TV Shows</button></a>
+            <a href="gamesapps.html"><button>Games</button></a>
+            <a href="collections.html"><button>Collections</button></a>
+            <a href="feedback.html"><button>Feedback</button></a>
+            <a href="https://wa.me/+26776929120"><button>Get in Touch</button></a>
+        </nav>
+    </div>
+</header> 
+
+<div class="container">
+
+  <form class="form" id="feedback">
+    
+    <h1 class="form__title">We Value Your Feedback</h1>
+      
+    <p class="form__description">Help us improve your Warner Bros experience by answering a few questions.</p>
+    
+    <label for="feedback-type" class="form__label">Type of Feedback:</label>
+
+    <select id="feedback-type" class="form-control"> 
+         <option value="bug">Report a Bug</option>
+         
+         <option value="suggestion">Suggestion for Improvement</option>
+      
+         <option value="other">Other</option>
+    </select>
+    <br><br>
+
+    <label for="feedback-details" class="form__label">Tell us more (optional):</label>
+    <textarea id="feedback-details" class="form-control" rows="5" placeholder="Describe your experience in detail (optional)"></textarea>
+    <br><br>
+
+    <button type="submit" class="form__button">Submit Feedback</button>
+
+  </form>
+</div>
+
+<script src="form.js"></script>  
+</body>
+</html>
